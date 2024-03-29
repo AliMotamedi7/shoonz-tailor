@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 class LoginInput extends StatefulWidget {
-  const LoginInput({super.key});
+  const LoginInput({super.key, required this.controller});
+
+  final TextEditingController controller;
 
   @override
   State<LoginInput> createState() => _LoginInputState();
@@ -16,6 +18,7 @@ class _LoginInputState extends State<LoginInput> {
       child: Directionality(
         textDirection: TextDirection.rtl,
         child: TextField(
+          controller: widget.controller,
           textDirection: TextDirection.rtl,
           textAlign: TextAlign.start,
           keyboardType: TextInputType.number,

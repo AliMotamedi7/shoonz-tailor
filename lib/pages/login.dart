@@ -11,6 +11,15 @@ class Login extends StatefulWidget {
 }
 
 class _LoginState extends State<Login> {
+  TextEditingController phoneController = TextEditingController();
+
+  @override
+  void dispose() {
+    // TODO: implement dispose
+    super.dispose();
+    phoneController.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -33,7 +42,9 @@ class _LoginState extends State<Login> {
                   margin: const EdgeInsets.all(10),
                   child: Image.asset("assets/images/Account-amico.png"),
                 ),
-                const LoginInput(),
+                LoginInput(
+                  controller: phoneController,
+                ),
                 const SizedBox(
                   height: 30,
                 ),
@@ -47,7 +58,9 @@ class _LoginState extends State<Login> {
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(10)),
                         backgroundColor: const Color(0xff005200)),
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pushNamed(context, "/otp");
+                    },
                     child: const Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
