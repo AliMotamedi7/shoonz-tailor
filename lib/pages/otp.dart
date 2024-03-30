@@ -15,7 +15,6 @@ class _OtpState extends State<Otp> {
 
   @override
   void dispose() {
-    // TODO: implement dispose
     super.dispose();
     otpController.dispose();
   }
@@ -71,7 +70,7 @@ class _OtpState extends State<Otp> {
                           borderRadius: BorderRadius.circular(10)),
                       backgroundColor: const Color(0xff005200)),
                   onPressed: () {
-                    Navigator.pushNamed(context, "/otp");
+                    Navigator.pushNamed(context, "/home");
                   },
                   child: const Row(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -94,7 +93,7 @@ class _OtpState extends State<Otp> {
                   ),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               TextButton(
