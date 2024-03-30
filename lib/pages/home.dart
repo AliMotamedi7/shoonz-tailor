@@ -1,7 +1,10 @@
 import 'dart:io';
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:shoonz_tailor/widgets/homeWidgets/customerChart.dart';
+import 'package:shoonz_tailor/widgets/homeWidgets/customer_name_list_item.dart';
 import 'package:shoonz_tailor/widgets/homeWidgets/topProfile.dart';
 
 class Home extends StatefulWidget {
@@ -12,6 +15,18 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  List<String> name = [
+    "امیررضامجد",
+    "میلاد صالحی",
+    "رامین حسنی",
+    "امیررضامجد",
+    "میلاد صالحی",
+    "رامین حسنی",
+    "امیررضامجد",
+    "میلاد صالحی",
+    "رامین حسنی",
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -57,7 +72,7 @@ class _HomeState extends State<Home> {
                             fontSize: 18, fontWeight: FontWeight.bold),
                       ),
                       SizedBox(
-                        width: 2,
+                        width: 5,
                       ),
                       Icon(
                         Icons.supervisor_account_outlined,
@@ -67,7 +82,64 @@ class _HomeState extends State<Home> {
                   ),
                 ],
               ),
-            )
+            ),
+            const SizedBox(
+              height: 15.0,
+            ),
+            Container(
+              height: 40,
+              margin: const EdgeInsets.only(right: 20),
+              child: ListView.builder(
+                scrollDirection: Axis.horizontal,
+                itemCount: name.length,
+                itemBuilder: (context, index) {
+                  return CustomerNameListItem(customerName: name[index]);
+                },
+              ),
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                          elevation: 0,
+                          backgroundColor: Colors.grey[200],
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10))),
+                      onPressed: () {},
+                      child: const Text(
+                        "مشاهده همه",
+                        textDirection: TextDirection.rtl,
+                        style: TextStyle(
+                          color: Color(0xff005200),
+                        ),
+                      )),
+                  const Row(
+                    children: [
+                      Text(
+                        "سفارشات",
+                        textAlign: TextAlign.end,
+                        textDirection: TextDirection.rtl,
+                        style: TextStyle(
+                            fontSize: 18, fontWeight: FontWeight.bold),
+                      ),
+                      SizedBox(
+                        width: 5,
+                      ),
+                      Icon(
+                        Icons.list_alt,
+                        size: 35,
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
       ),
