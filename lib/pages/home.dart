@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:shoonz_tailor/widgets/homeWidgets/customerChart.dart';
 import 'package:shoonz_tailor/widgets/homeWidgets/customer_name_list_item.dart';
+import 'package:shoonz_tailor/widgets/homeWidgets/orders_list_item.dart';
 import 'package:shoonz_tailor/widgets/homeWidgets/topProfile.dart';
 
 class Home extends StatefulWidget {
@@ -30,6 +31,60 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      floatingActionButton: FloatingActionButton(
+        elevation: 0,
+        onPressed: () {},
+        backgroundColor: const Color(0xff005200),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
+        child: const Icon(
+          Icons.add,
+          color: Colors.white,
+          size: 40,
+        ),
+      ),
+      bottomNavigationBar: ClipRRect(
+          borderRadius: const BorderRadius.only(
+              topLeft: Radius.circular(30), topRight: Radius.circular(30)),
+          child: BottomAppBar(
+            shape: const CircularNotchedRectangle(),
+            notchMargin: 5,
+            color: const Color(0xffb2cab2),
+            height: 60,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                IconButton(
+                  onPressed: () {},
+                  icon: const Icon(
+                    Icons.home,
+                    color: Colors.white,
+                  ),
+                ),
+                IconButton(
+                  onPressed: () {},
+                  icon: const Icon(
+                    Icons.list_alt,
+                    color: Colors.white,
+                  ),
+                ),
+                IconButton(
+                  onPressed: () {},
+                  icon: const Icon(
+                    Icons.person,
+                    color: Colors.white,
+                  ),
+                ),
+                IconButton(
+                  onPressed: () {},
+                  icon: const Icon(
+                    Icons.timelapse,
+                    color: Colors.white,
+                  ),
+                ),
+              ],
+            ),
+          )),
       body: SafeArea(
         top: Platform.isAndroid ? false : true,
         child: Column(
@@ -89,12 +144,15 @@ class _HomeState extends State<Home> {
             Container(
               height: 40,
               margin: const EdgeInsets.only(right: 20),
-              child: ListView.builder(
-                scrollDirection: Axis.horizontal,
-                itemCount: name.length,
-                itemBuilder: (context, index) {
-                  return CustomerNameListItem(customerName: name[index]);
-                },
+              child: Directionality(
+                textDirection: TextDirection.rtl,
+                child: ListView.builder(
+                  scrollDirection: Axis.horizontal,
+                  itemCount: name.length,
+                  itemBuilder: (context, index) {
+                    return CustomerNameListItem(customerName: name[index]);
+                  },
+                ),
               ),
             ),
             const SizedBox(
@@ -138,6 +196,20 @@ class _HomeState extends State<Home> {
                     ],
                   ),
                 ],
+              ),
+            ),
+            //
+            const SizedBox(
+              height: 15,
+            ),
+            Expanded(
+              child: SizedBox(
+                width: MediaQuery.sizeOf(context).width,
+                child: ListView.builder(
+                    itemCount: 3,
+                    itemBuilder: (context, index) {
+                      return const OrdersListItem(orderNumber: "110");
+                    }),
               ),
             ),
           ],
