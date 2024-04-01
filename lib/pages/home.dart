@@ -86,9 +86,13 @@ class _HomeState extends State<Home> {
             ),
           )),
       body: SafeArea(
-        top: Platform.isAndroid ? false : true,
+        top: Platform.isAndroid ? true : false,
         child: Column(
           children: [
+            if (Platform.isAndroid)
+              const SizedBox(
+                height: 10.0,
+              ),
             const TopProfile(
                 phoneNumber: "09122758432", tailorName: "نام خیاط"),
             const SizedBox(
