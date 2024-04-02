@@ -1,10 +1,6 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:shoonz_tailor/widgets/customerWidgets/customerDateButton.dart';
 import 'package:shoonz_tailor/widgets/customerWidgets/customer_list_name.dart';
-import 'package:shoonz_tailor/widgets/homeWidgets/customer_name_list_item.dart';
-import 'package:shoonz_tailor/widgets/homeWidgets/orders_list_item.dart';
 
 class CustomerPage extends StatefulWidget {
   const CustomerPage({super.key});
