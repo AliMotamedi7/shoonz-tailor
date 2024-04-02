@@ -86,7 +86,6 @@ class _HomeState extends State<Home> {
             ),
           )),
       body: SafeArea(
-        top: Platform.isAndroid ? true : false,
         child: Column(
           children: [
             if (Platform.isAndroid)
@@ -113,7 +112,9 @@ class _HomeState extends State<Home> {
                           backgroundColor: Colors.grey[200],
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(10))),
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pushNamed(context, "/customer");
+                      },
                       child: const Text(
                         "مشاهده همه",
                         textDirection: TextDirection.rtl,
