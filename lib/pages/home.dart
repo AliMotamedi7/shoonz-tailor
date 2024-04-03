@@ -1,8 +1,5 @@
 import 'dart:io';
-
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:shoonz_tailor/widgets/homeWidgets/customerChart.dart';
 import 'package:shoonz_tailor/widgets/homeWidgets/customer_name_list_item.dart';
 import 'package:shoonz_tailor/widgets/homeWidgets/orders_list_item.dart';
@@ -174,7 +171,9 @@ class _HomeState extends State<Home> {
                           backgroundColor: Colors.grey[200],
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(10))),
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pushNamed(context, "/order");
+                      },
                       child: const Text(
                         "مشاهده همه",
                         textDirection: TextDirection.rtl,

@@ -19,6 +19,19 @@ class _CustomerPageState extends State<CustomerPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: const Color(0xff005200),
+        elevation: 0,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(30),
+        ),
+        onPressed: () {},
+        child: const Icon(
+          Icons.add,
+          color: Colors.white,
+          size: 40,
+        ),
+      ),
       body: SafeArea(
           child: SafeArea(
               child: Column(
@@ -105,6 +118,7 @@ class _CustomerPageState extends State<CustomerPage> {
                   }),
             ),
           ),
+          const Spacer(),
         ],
       ))),
     );

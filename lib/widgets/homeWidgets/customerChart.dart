@@ -1,5 +1,4 @@
 import 'package:fl_chart/fl_chart.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class CustomerChart extends StatefulWidget {
@@ -49,7 +48,7 @@ class _CustomerChartState extends State<CustomerChart> {
             height: 20,
           ),
           Expanded(
-            child: Container(
+            child: SizedBox(
               width: MediaQuery.sizeOf(context).width,
               child: LineChart(
                 LineChartData(
