@@ -3,6 +3,7 @@ import 'package:shoonz_tailor/pages/customer.dart';
 import 'package:shoonz_tailor/pages/home.dart';
 import 'package:shoonz_tailor/pages/login.dart';
 import 'package:shoonz_tailor/pages/order.dart';
+import 'package:shoonz_tailor/pages/order_registration.dart';
 import 'package:shoonz_tailor/pages/otp.dart';
 import 'package:shoonz_tailor/pages/splash.dart';
 
@@ -26,6 +27,7 @@ class MyApp extends StatelessWidget {
         '/home': (context) => const Home(),
         '/customer': (context) => const CustomerPage(),
         '/order': (context) => const OrderPage(),
+        '/orderRegistration': (context) => const OrderRegistration(),
       },
     );
   }

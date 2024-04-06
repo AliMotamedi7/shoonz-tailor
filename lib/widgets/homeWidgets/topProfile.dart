@@ -37,7 +37,7 @@ class TopProfile extends StatelessWidget {
               padding: const EdgeInsets.all(3),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(7),
-                color: const Color(0xff008000),
+                color: const Color(0xff347533),
               ),
               child: const Icon(
                 Icons.settings_outlined,
