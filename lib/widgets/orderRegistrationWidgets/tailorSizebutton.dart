@@ -22,7 +22,7 @@ class SizeTailorButton extends StatelessWidget {
               child: TextButton(
                 onPressed: () {},
                 child: const Text(
-                  "وارد کردن اندازه های(امیررضامجد)",
+                  "واردکردن اندازه های(امیررضامجد)",
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
                   textDirection: TextDirection.rtl,
