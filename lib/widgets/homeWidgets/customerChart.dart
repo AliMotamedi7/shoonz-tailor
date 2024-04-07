@@ -17,7 +17,7 @@ class _CustomerChartState extends State<CustomerChart> {
       height: MediaQuery.sizeOf(context).height / 3.7,
       padding: const EdgeInsets.all(20),
       decoration: BoxDecoration(
-          color: const Color(0xffb2cab2),
+          color: const Color(0xfff2f6f2),
           borderRadius: BorderRadius.circular(20)),
       child: Column(
         children: [

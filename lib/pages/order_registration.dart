@@ -1,5 +1,6 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:shoonz_tailor/widgets/orderRegistrationWidgets/orde_registration_table.dart';
 import 'package:shoonz_tailor/widgets/orderRegistrationWidgets/tailorSizebutton.dart';
 import 'package:shoonz_tailor/widgets/orderRegistrationWidgets/topOrderProfile.dart';
@@ -18,6 +19,10 @@ class _OrderRegistrationState extends State<OrderRegistration> {
       body: SafeArea(
           child: Column(
         children: [
+          if (Platform.isAndroid)
+            const SizedBox(
+              width: 10,
+            ),
           TopOrderProfile(phoneNumber: "09022259493", name: "امیررضامجد"),
           const SizeTailorButton(),
           Directionality(
@@ -48,7 +53,7 @@ class _OrderRegistrationState extends State<OrderRegistration> {
               ),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 15,
           ),
           const OrderRegistrationTable(),

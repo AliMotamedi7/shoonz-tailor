@@ -11,7 +11,7 @@ class CustomerNameListItem extends StatelessWidget {
       margin: const EdgeInsets.symmetric(horizontal: 5),
       padding: const EdgeInsets.all(10),
       decoration: BoxDecoration(
-          color: const Color(0xffb2cab2),
+          color: const Color(0xfff2f6f2),
           borderRadius: BorderRadius.circular(10)),
       child: Text(
         customerName,

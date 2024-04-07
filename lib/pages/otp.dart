@@ -22,7 +22,6 @@ class _OtpState extends State<Otp> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      resizeToAvoidBottomInset: false,
       body: SafeArea(
         top: Platform.isAndroid ? false : true,
         child: SingleChildScrollView(

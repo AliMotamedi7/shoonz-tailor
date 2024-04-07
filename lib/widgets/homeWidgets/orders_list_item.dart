@@ -16,7 +16,7 @@ class OrdersListItem extends StatelessWidget {
             Container(
               padding: const EdgeInsets.all(5),
               decoration: const BoxDecoration(
-                color: Color(0xffb2cab2),
+                color: Color(0xfff2f6f2),
                 borderRadius: BorderRadius.only(
                   bottomRight: Radius.circular(10),
                   topRight: Radius.circular(10),
@@ -32,7 +32,7 @@ class OrdersListItem extends StatelessWidget {
               child: Container(
                 padding: const EdgeInsets.all(7),
                 decoration: const BoxDecoration(
-                  color: Color(0xffb2cab2),
+                  color: Color(0xfff2f6f2),
                   borderRadius: BorderRadius.only(
                     bottomLeft: Radius.circular(10),
                     topRight: Radius.circular(10),
