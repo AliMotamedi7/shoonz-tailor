@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 class OrderRegistrationTable extends StatefulWidget {
   const OrderRegistrationTable({super.key});
@@ -10,22 +12,19 @@ class OrderRegistrationTable extends StatefulWidget {
 class _OrderRegistrationTableState extends State<OrderRegistrationTable> {
   @override
   Widget build(BuildContext context) {
-    return Table(
-      border: TableBorder(
-        horizontalInside:
-            BorderSide(style: BorderStyle.solid, width: 5, color: Colors.white),
-        verticalInside: BorderSide(style: BorderStyle.none),
-      ),
-      textDirection: TextDirection.rtl,
-      children: [
-        TableRow(
-            decoration: BoxDecoration(
-              color: Color(0xffd9e5da),
-            ),
-            children: [
-              TableCell(
-                verticalAlignment: TableCellVerticalAlignment.middle,
-                child: Padding(
+    return Expanded(
+      child: Column(
+        children: [
+          Container(
+            decoration: const BoxDecoration(color: Color(0xfff2f6f2)),
+            width: MediaQuery.sizeOf(context).width,
+            padding: const EdgeInsets.all(8),
+            child: const Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              textDirection: TextDirection.rtl,
+              children: [
+                Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Text(
                     "اطلاعات سفارش",
@@ -33,10 +32,7 @@ class _OrderRegistrationTableState extends State<OrderRegistrationTable> {
                     style: TextStyle(fontSize: 12),
                   ),
                 ),
-              ),
-              TableCell(
-                verticalAlignment: TableCellVerticalAlignment.middle,
-                child: Padding(
+                Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Text(
                     "تعداد",
@@ -44,10 +40,7 @@ class _OrderRegistrationTableState extends State<OrderRegistrationTable> {
                     style: TextStyle(fontSize: 12),
                   ),
                 ),
-              ),
-              TableCell(
-                verticalAlignment: TableCellVerticalAlignment.middle,
-                child: Padding(
+                Padding(
                   padding: EdgeInsets.all(10.0),
                   child: Text(
                     "فی",
@@ -55,10 +48,7 @@ class _OrderRegistrationTableState extends State<OrderRegistrationTable> {
                     style: TextStyle(fontSize: 12),
                   ),
                 ),
-              ),
-              TableCell(
-                verticalAlignment: TableCellVerticalAlignment.middle,
-                child: Padding(
+                Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Text(
                     "قیمت کل",
@@ -66,103 +56,78 @@ class _OrderRegistrationTableState extends State<OrderRegistrationTable> {
                     style: TextStyle(fontSize: 12),
                   ),
                 ),
-              ),
-              TableCell(child: Text(""))
-            ]),
-        ...List.generate(
-            3,
-            (index) => TableRow(
-                  children: List.generate(
-                      5,
-                      (index) => TableCell(
-                              child: Text(
-                            "",
-                            style: TextStyle(fontSize: 3),
-                          ))),
-                )),
-        ...List.generate(
-            3,
-            (index) => TableRow(
-                  decoration: BoxDecoration(
-                      color: Color(0xffd9e5da),
-                      borderRadius: BorderRadius.circular(10)),
-                  children: [
-                    TableCell(
-                      verticalAlignment: TableCellVerticalAlignment.middle,
-                      child: Padding(
-                        padding: EdgeInsets.all(8.0),
-                        child: Text(
+                SizedBox(
+                  width: 10,
+                ),
+              ],
+            ),
+          ),
+          const SizedBox(
+            height: 5,
+          ),
+          Expanded(
+            child: ListView.builder(
+                itemCount: 3,
+                shrinkWrap: true,
+                itemBuilder: (context, index) {
+                  return Container(
+                    width: MediaQuery.sizeOf(context).width,
+                    margin:
+                        const EdgeInsets.symmetric(horizontal: 20, vertical: 7),
+                    padding: const EdgeInsets.all(10),
+                    decoration: BoxDecoration(
+                        color: const Color(0xffd9e5da),
+                        borderRadius: BorderRadius.circular(12)),
+                    child: Row(
+                      textDirection: TextDirection.rtl,
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        const Text(
                           "شلوار مردانه بلوچی",
-                          textDirection: TextDirection.rtl,
                           textAlign: TextAlign.center,
-                          style: TextStyle(
-                            color: Colors.black,
-                          ),
+                          style: TextStyle(color: Colors.black, fontSize: 12),
                         ),
-                      ),
-                    ),
-                    TableCell(
-                      verticalAlignment: TableCellVerticalAlignment.middle,
-                      child: Padding(
-                        padding: EdgeInsets.all(8.0),
-                        child: Text(
+                        const Text(
                           "۲",
-                          textDirection: TextDirection.rtl,
                           textAlign: TextAlign.center,
-                          style: TextStyle(
-                            color: Color(0xff005200),
-                          ),
+                          style:
+                              TextStyle(color: Color(0xff005200), fontSize: 14),
                         ),
-                      ),
-                    ),
-                    TableCell(
-                      verticalAlignment: TableCellVerticalAlignment.middle,
-                      child: Padding(
-                        padding: EdgeInsets.all(8.0),
-                        child: Text(
+                        const Text(
                           "۱۰۰,۰۰۰",
-                          textDirection: TextDirection.rtl,
                           textAlign: TextAlign.center,
-                          style: TextStyle(
-                            color: Color(0xff005200),
+                          style: TextStyle(color: Color(0xff005200)),
+                        ),
+                        Container(
+                          alignment: Alignment.center,
+                          padding: const EdgeInsets.all(5),
+                          decoration: BoxDecoration(
+                            border: Border.all(color: Colors.white, width: 3),
+                            borderRadius: BorderRadius.circular(5),
+                            color: const Color(0xff005200),
+                          ),
+                          child: const Text(
+                            "۲,۲۵۰,۰۰۰تومان",
+                            style: TextStyle(color: Colors.white),
                           ),
                         ),
-                      ),
-                    ),
-                    TableCell(
-                      verticalAlignment: TableCellVerticalAlignment.middle,
-                      child: Container(
-                        alignment: Alignment.center,
-                        padding: EdgeInsets.all(2),
-                        decoration: BoxDecoration(
-                          color: Color(0xff005200),
-                          border: Border.all(color: Colors.white, width: 3),
-                        ),
-                        child: Text(
-                          "۲,۲۵۰,۰۰۰ تومان",
-                          textAlign: TextAlign.center,
-                          textDirection: TextDirection.rtl,
-                          style: TextStyle(
+                        Container(
+                          padding: const EdgeInsets.all(3),
+                          alignment: Alignment.center,
+                          decoration: BoxDecoration(
+                              color: Colors.grey[400], shape: BoxShape.circle),
+                          child: const Icon(
+                            Icons.print,
                             color: Colors.white,
                           ),
                         ),
-                      ),
+                      ],
                     ),
-                    TableCell(
-                      verticalAlignment: TableCellVerticalAlignment.middle,
-                      child: Container(
-                        padding: EdgeInsets.all(5),
-                        decoration: BoxDecoration(
-                            color: Colors.grey[400], shape: BoxShape.circle),
-                        child: Icon(
-                          Icons.print,
-                          color: Colors.white,
-                        ),
-                      ),
-                    ),
-                  ],
-                )),
-      ],
+                  );
+                }),
+          )
+        ],
+      ),
     );
   }
 }

@@ -2,6 +2,8 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:shoonz_tailor/widgets/orderRegistrationWidgets/orde_registration_table.dart';
+import 'package:shoonz_tailor/widgets/orderRegistrationWidgets/order_registration_buttons.dart';
+import 'package:shoonz_tailor/widgets/orderRegistrationWidgets/price_order.dart';
 import 'package:shoonz_tailor/widgets/orderRegistrationWidgets/tailorSizebutton.dart';
 import 'package:shoonz_tailor/widgets/orderRegistrationWidgets/topOrderProfile.dart';
 
@@ -57,7 +59,6 @@ class _OrderRegistrationState extends State<OrderRegistration> {
             height: 15,
           ),
           const OrderRegistrationTable(),
-          const Spacer(),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -88,7 +89,7 @@ class _OrderRegistrationState extends State<OrderRegistration> {
                         borderRadius: BorderRadius.circular(10))),
                 onPressed: () {},
                 icon: const Icon(
-                  Icons.note,
+                  Icons.list_alt_sharp,
                   color: Colors.black,
                 ),
                 label: const Text(
@@ -98,6 +99,14 @@ class _OrderRegistrationState extends State<OrderRegistration> {
               ),
             ],
           ),
+          const SizedBox(
+            height: 10,
+          ),
+          const PriceOrder(),
+          const SizedBox(
+            height: 10,
+          ),
+          OrderRestrationButtons(),
         ],
       )),
     );
