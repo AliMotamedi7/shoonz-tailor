@@ -57,6 +57,47 @@ class _OrderRegistrationState extends State<OrderRegistration> {
             height: 15,
           ),
           const OrderRegistrationTable(),
+          const Spacer(),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              ElevatedButton.icon(
+                style: ElevatedButton.styleFrom(
+                    elevation: 0,
+                    backgroundColor: const Color(0xffd9e5da),
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10))),
+                onPressed: () {},
+                icon: const Icon(
+                  Icons.date_range,
+                  color: Colors.black,
+                ),
+                label: const Text(
+                  "تاریخ تحویل",
+                  style: TextStyle(color: Colors.black),
+                ),
+              ),
+              const SizedBox(
+                width: 10,
+              ),
+              ElevatedButton.icon(
+                style: ElevatedButton.styleFrom(
+                    elevation: 0,
+                    backgroundColor: const Color(0xffd9e5da),
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10))),
+                onPressed: () {},
+                icon: const Icon(
+                  Icons.note,
+                  color: Colors.black,
+                ),
+                label: const Text(
+                  "یادداشت ها",
+                  style: TextStyle(color: Colors.black),
+                ),
+              ),
+            ],
+          ),
         ],
       )),
     );
