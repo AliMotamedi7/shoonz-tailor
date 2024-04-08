@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:shoonz_tailor/widgets/enterSizeWidgets/clothes_box.dart';
 import 'dart:io';
 import 'package:shoonz_tailor/widgets/enterSizeWidgets/grid_clothes_box.dart';
