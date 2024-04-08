@@ -19,7 +19,9 @@ class SizeTailorButton extends StatelessWidget {
           children: [
             Expanded(
               child: TextButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushNamed(context, "/enterSize");
+                },
                 child: const Text(
                   "واردکردن اندازه های(امیررضامجد)",
                   maxLines: 1,

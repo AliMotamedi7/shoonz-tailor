@@ -10,7 +10,7 @@ class OrderRestrationButtons extends StatelessWidget {
       children: [
         ElevatedButton.icon(
           style: ElevatedButton.styleFrom(
-              padding: EdgeInsets.symmetric(vertical: 8, horizontal: 10),
+              padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 10),
               backgroundColor: const Color(0xffd9e5da),
               elevation: 0,
               shape: RoundedRectangleBorder(
@@ -48,8 +48,8 @@ class OrderRestrationButtons extends StatelessWidget {
             style: TextStyle(color: Colors.white),
           ),
           icon: Container(
-            decoration:
-                BoxDecoration(color: Color(0xff347533), shape: BoxShape.circle),
+            decoration: const BoxDecoration(
+                color: Color(0xff347533), shape: BoxShape.circle),
             padding: const EdgeInsets.all(3),
             child: const Icon(
               Icons.keyboard_arrow_down,

@@ -23,7 +23,7 @@ class _OrderRegistrationState extends State<OrderRegistration> {
         children: [
           if (Platform.isAndroid)
             const SizedBox(
-              width: 10,
+              height: 10,
             ),
           TopOrderProfile(phoneNumber: "09022259493", name: "امیررضامجد"),
           const SizeTailorButton(),
@@ -106,7 +106,7 @@ class _OrderRegistrationState extends State<OrderRegistration> {
           const SizedBox(
             height: 10,
           ),
-          OrderRestrationButtons(),
+          const OrderRestrationButtons(),
         ],
       )),
     );

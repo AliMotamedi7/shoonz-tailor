@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shoonz_tailor/pages/customer.dart';
+import 'package:shoonz_tailor/pages/enter_size.dart';
 import 'package:shoonz_tailor/pages/home.dart';
 import 'package:shoonz_tailor/pages/login.dart';
 import 'package:shoonz_tailor/pages/order.dart';
@@ -28,6 +29,7 @@ class MyApp extends StatelessWidget {
         '/customer': (context) => const CustomerPage(),
         '/order': (context) => const OrderPage(),
         '/orderRegistration': (context) => const OrderRegistration(),
+        '/enterSize': (context) => EnterSize(),
       },
     );
   }
