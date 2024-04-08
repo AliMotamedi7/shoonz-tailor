@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shoonz_tailor/constants/appColors.dart';
 
 class CustomerNameListItem extends StatelessWidget {
   const CustomerNameListItem({super.key, required this.customerName});
@@ -11,14 +12,14 @@ class CustomerNameListItem extends StatelessWidget {
       margin: const EdgeInsets.symmetric(horizontal: 5),
       padding: const EdgeInsets.all(10),
       decoration: BoxDecoration(
-          color: const Color(0xfff2f6f2),
+          color: AppColors.greenLight,
           borderRadius: BorderRadius.circular(10)),
       child: Text(
         customerName,
         textAlign: TextAlign.end,
         textDirection: TextDirection.rtl,
         style: const TextStyle(
-          color: Color(0xff005200),
+          color: AppColors.greenShoonz,
           fontSize: 14.0,
         ),
       ),

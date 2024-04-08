@@ -4,6 +4,7 @@ import 'package:shoonz_tailor/widgets/homeWidgets/customerChart.dart';
 import 'package:shoonz_tailor/widgets/homeWidgets/customer_name_list_item.dart';
 import 'package:shoonz_tailor/widgets/homeWidgets/orders_list_item.dart';
 import 'package:shoonz_tailor/widgets/homeWidgets/topProfile.dart';
+import 'package:shoonz_tailor/constants/appColors.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -34,7 +35,7 @@ class _HomeState extends State<Home> {
         onPressed: () {
           Navigator.pushNamed(context, "/orderRegistration");
         },
-        backgroundColor: const Color(0xff005200),
+        backgroundColor: AppColors.greenShoonz,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
         child: const Icon(
           Icons.add,
@@ -48,7 +49,7 @@ class _HomeState extends State<Home> {
           child: BottomAppBar(
             shape: const CircularNotchedRectangle(),
             notchMargin: 5,
-            color: const Color(0xffb2cab2),
+            color: AppColors.greenDark,
             height: 60,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -89,7 +90,7 @@ class _HomeState extends State<Home> {
           children: [
             if (Platform.isAndroid)
               const SizedBox(
-                height: 10.0,
+                height: 20.0,
               ),
             const TopProfile(
                 phoneNumber: "09122758432", tailorName: "نام خیاط"),
@@ -118,7 +119,7 @@ class _HomeState extends State<Home> {
                         "مشاهده همه",
                         textDirection: TextDirection.rtl,
                         style: TextStyle(
-                          color: Color(0xff005200),
+                          color: AppColors.greenShoonz,
                         ),
                       )),
                   const Row(
@@ -180,7 +181,7 @@ class _HomeState extends State<Home> {
                         "مشاهده همه",
                         textDirection: TextDirection.rtl,
                         style: TextStyle(
-                          color: Color(0xff005200),
+                          color: AppColors.greenShoonz,
                         ),
                       )),
                   const Row(

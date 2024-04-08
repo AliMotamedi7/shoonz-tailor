@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shoonz_tailor/constants/appColors.dart';
 
 class OrderRegistrationTable extends StatefulWidget {
   const OrderRegistrationTable({super.key});
@@ -14,7 +15,7 @@ class _OrderRegistrationTableState extends State<OrderRegistrationTable> {
       child: Column(
         children: [
           Container(
-            decoration: const BoxDecoration(color: Color(0xfff2f6f2)),
+            decoration: const BoxDecoration(color: AppColors.greyBox),
             width: MediaQuery.sizeOf(context).width,
             padding: const EdgeInsets.all(8),
             child: const Row(
@@ -74,7 +75,7 @@ class _OrderRegistrationTableState extends State<OrderRegistrationTable> {
                         const EdgeInsets.symmetric(horizontal: 20, vertical: 7),
                     padding: const EdgeInsets.all(10),
                     decoration: BoxDecoration(
-                        color: const Color(0xffd9e5da),
+                        color: AppColors.greenLight,
                         borderRadius: BorderRadius.circular(12)),
                     child: Row(
                       textDirection: TextDirection.rtl,
@@ -89,12 +90,12 @@ class _OrderRegistrationTableState extends State<OrderRegistrationTable> {
                           "۲",
                           textAlign: TextAlign.center,
                           style:
-                              TextStyle(color: Color(0xff005200), fontSize: 14),
+                              TextStyle(color: AppColors.greenShoonz, fontSize: 14),
                         ),
                         const Text(
                           "۱۰۰,۰۰۰",
                           textAlign: TextAlign.center,
-                          style: TextStyle(color: Color(0xff005200)),
+                          style: TextStyle(color:AppColors.greenShoonz),
                         ),
                         Container(
                           alignment: Alignment.center,
@@ -102,7 +103,7 @@ class _OrderRegistrationTableState extends State<OrderRegistrationTable> {
                           decoration: BoxDecoration(
                             border: Border.all(color: Colors.white, width: 3),
                             borderRadius: BorderRadius.circular(5),
-                            color: const Color(0xff005200),
+                            color: AppColors.greenShoonz,
                           ),
                           child: const Text(
                             "۲,۲۵۰,۰۰۰تومان",

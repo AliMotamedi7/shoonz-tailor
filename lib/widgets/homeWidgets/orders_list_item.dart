@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shoonz_tailor/constants/appColors.dart';
 
 class OrdersListItem extends StatelessWidget {
   const OrdersListItem({super.key, required this.orderNumber});
@@ -16,7 +17,7 @@ class OrdersListItem extends StatelessWidget {
             Container(
               padding: const EdgeInsets.all(5),
               decoration: const BoxDecoration(
-                color: Color(0xfff2f6f2),
+                color: AppColors.greenLight,
                 borderRadius: BorderRadius.only(
                   bottomRight: Radius.circular(10),
                   topRight: Radius.circular(10),
@@ -32,7 +33,7 @@ class OrdersListItem extends StatelessWidget {
               child: Container(
                 padding: const EdgeInsets.all(7),
                 decoration: const BoxDecoration(
-                  color: Color(0xfff2f6f2),
+                  color: AppColors.greenLight,
                   borderRadius: BorderRadius.only(
                     bottomLeft: Radius.circular(10),
                     topRight: Radius.circular(10),

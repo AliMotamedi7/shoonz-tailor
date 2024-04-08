@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shoonz_tailor/constants/appColors.dart';
 
 class PriceOrder extends StatelessWidget {
   const PriceOrder({super.key});
@@ -44,7 +45,7 @@ class PriceOrder extends StatelessWidget {
               Container(
                 padding: const EdgeInsets.all(6),
                 decoration: BoxDecoration(
-                  color: const Color(0xff005200),
+                  color: AppColors.greenShoonz,
                   borderRadius: BorderRadius.circular(5),
                 ),
                 child: const Text(

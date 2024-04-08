@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shoonz_tailor/constants/appColors.dart';
 
 class CustomerListName extends StatelessWidget {
   const CustomerListName({super.key, required this.num});
@@ -10,13 +11,13 @@ class CustomerListName extends StatelessWidget {
     return Directionality(
       textDirection: TextDirection.rtl,
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 5),
+        padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 8),
         child: Row(
           children: [
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 8),
               decoration: const BoxDecoration(
-                color: Color(0xffb2cab2),
+                color: AppColors.greenDark,
                 borderRadius: BorderRadius.only(
                   bottomRight: Radius.circular(10),
                   topRight: Radius.circular(10),
@@ -32,7 +33,7 @@ class CustomerListName extends StatelessWidget {
               child: Container(
                 padding: const EdgeInsets.all(7),
                 decoration: const BoxDecoration(
-                  color: Color(0xffb2cab2),
+                  color: AppColors.greenDark,
                   borderRadius: BorderRadius.only(
                     bottomLeft: Radius.circular(10),
                     topRight: Radius.circular(10),

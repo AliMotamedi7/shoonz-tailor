@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shoonz_tailor/constants/appColors.dart';
 
 class ClotheBox extends StatelessWidget {
   const ClotheBox({super.key, required this.name});
@@ -13,7 +14,7 @@ class ClotheBox extends StatelessWidget {
       margin: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
       padding: const EdgeInsets.all(10),
       decoration: BoxDecoration(
-          color: const Color(0xfff2f6f2),
+          color: AppColors.greenLight,
           borderRadius: BorderRadius.circular(10)),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -25,7 +26,7 @@ class ClotheBox extends StatelessWidget {
             height: 80,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
-              color: const Color(0xffd9e5da),
+              color: AppColors.greenDark,
             ),
           ),
         ],
