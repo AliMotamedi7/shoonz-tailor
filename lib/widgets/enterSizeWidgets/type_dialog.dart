@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:shoonz_tailor/constants/appColors.dart';
 
 class TypeDialog extends StatefulWidget {
@@ -22,9 +21,79 @@ class _TypeDialogState extends State<TypeDialog> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            TypeList(typeTitle: "تیار", typeSubTitle: "تیار"),
-            TypeList(typeTitle: "تیار", typeSubTitle: "تیار"),
-            TypeList(typeTitle: "تیار", typeSubTitle: "تیار"),
+            const TypeList(
+              typeTitle: "تیار",
+              typeSubTitle: "تیار",
+              count: 10,
+            ),
+            const TypeList(
+              typeTitle: "نوع جیگ",
+              typeSubTitle: "جاپانی",
+              count: 5,
+            ),
+            const TypeList(
+              typeTitle: "مدل جیگ",
+              typeSubTitle: "گول",
+              count: 3,
+            ),
+            Row(
+              textDirection: TextDirection.rtl,
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                SizedBox(
+                  width: 120,
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                        alignment: Alignment.center,
+                        elevation: 0,
+                        backgroundColor: AppColors.greenShoonz,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10),
+                        )),
+                    onPressed: () {
+                      var snackBar = const SnackBar(
+                          content: Text(
+                        'تایید شد',
+                        textAlign: TextAlign.start,
+                        textDirection: TextDirection.rtl,
+                      ));
+                      ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                      Navigator.pop(context);
+                    },
+                    child: const Text(
+                      "تاییداطلاعات",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                          color: Colors.white, fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  width: 120,
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                        alignment: Alignment.center,
+                        elevation: 0,
+                        backgroundColor: AppColors.greenDark,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10),
+                        )),
+                    onPressed: () {
+                      Navigator.pop(context);
+                    },
+                    child: const Text(
+                      "خروج",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                          color: Colors.black, fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            const SizedBox(
+              height: 20,
+            )
           ],
         ),
       ),
@@ -34,10 +103,14 @@ class _TypeDialogState extends State<TypeDialog> {
 
 class TypeList extends StatefulWidget {
   const TypeList(
-      {super.key, required this.typeTitle, required this.typeSubTitle});
+      {super.key,
+      required this.typeTitle,
+      required this.typeSubTitle,
+      required this.count});
 
   final String typeTitle;
   final String typeSubTitle;
+  final int count;
 
   @override
   State<TypeList> createState() => _TypeListState();
@@ -75,6 +148,7 @@ class _TypeListState extends State<TypeList> {
               child: ListView.builder(
                   shrinkWrap: true,
                   scrollDirection: Axis.horizontal,
+                  itemCount: widget.count,
                   itemBuilder: (context, index) {
                     return Column(
                       crossAxisAlignment: CrossAxisAlignment.center,
@@ -85,7 +159,7 @@ class _TypeListState extends State<TypeList> {
                           alignment: Alignment.center,
                           margin: const EdgeInsets.only(left: 10),
                           decoration: BoxDecoration(
-                            color: AppColors.greenDark,
+                            color: AppColors.greenLight,
                             borderRadius: BorderRadius.circular(10),
                           ),
                           child: Image.asset("assets/images/clotheIcon.png"),
