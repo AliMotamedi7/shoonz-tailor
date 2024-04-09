@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shoonz_tailor/constants/appColors.dart';
 
 class SizeTailorButton extends StatelessWidget {
   const SizeTailorButton({super.key});
@@ -10,7 +11,7 @@ class SizeTailorButton extends StatelessWidget {
       margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
       padding: const EdgeInsets.symmetric(vertical: 10),
       decoration: BoxDecoration(
-          color: const Color(0xffd9e5da),
+          color:AppColors.greenDark,
           borderRadius: BorderRadius.circular(15)),
       child: Directionality(
         textDirection: TextDirection.rtl,

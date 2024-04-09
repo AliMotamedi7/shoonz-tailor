@@ -6,6 +6,7 @@ import 'package:shoonz_tailor/widgets/orderRegistrationWidgets/order_registratio
 import 'package:shoonz_tailor/widgets/orderRegistrationWidgets/price_order.dart';
 import 'package:shoonz_tailor/widgets/orderRegistrationWidgets/tailorSizebutton.dart';
 import 'package:shoonz_tailor/widgets/orderRegistrationWidgets/topOrderProfile.dart';
+import 'package:shoonz_tailor/constants/appColors.dart';
 
 class OrderRegistration extends StatefulWidget {
   const OrderRegistration({super.key});
@@ -23,7 +24,7 @@ class _OrderRegistrationState extends State<OrderRegistration> {
         children: [
           if (Platform.isAndroid)
             const SizedBox(
-              height: 10,
+              height: 20,
             ),
           TopOrderProfile(phoneNumber: "09022259493", name: "امیررضامجد"),
           const SizeTailorButton(),
@@ -37,7 +38,7 @@ class _OrderRegistrationState extends State<OrderRegistration> {
                     padding: const EdgeInsets.all(2),
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(5),
-                        color: const Color(0xffd9e5da)),
+                        color: AppColors.greenLight),
                     child: const Icon(
                       Icons.view_list_outlined,
                     ),
@@ -65,7 +66,7 @@ class _OrderRegistrationState extends State<OrderRegistration> {
               ElevatedButton.icon(
                 style: ElevatedButton.styleFrom(
                     elevation: 0,
-                    backgroundColor: const Color(0xffd9e5da),
+                    backgroundColor: AppColors.greenDark,
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10))),
                 onPressed: () {},
@@ -84,7 +85,7 @@ class _OrderRegistrationState extends State<OrderRegistration> {
               ElevatedButton.icon(
                 style: ElevatedButton.styleFrom(
                     elevation: 0,
-                    backgroundColor: const Color(0xffd9e5da),
+                    backgroundColor: AppColors.greenDark,
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10))),
                 onPressed: () {},
@@ -107,6 +108,9 @@ class _OrderRegistrationState extends State<OrderRegistration> {
             height: 10,
           ),
           const OrderRestrationButtons(),
+          const SizedBox(
+            height: 20,
+          ),
         ],
       )),
     );

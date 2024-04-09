@@ -2,6 +2,8 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:shoonz_tailor/widgets/loginInput.dart';
+import 'package:shoonz_tailor/constants/appColors.dart';
+
 
 class Login extends StatefulWidget {
   const Login({super.key});
@@ -28,7 +30,7 @@ class _LoginState extends State<Login> {
             child: Column(
               children: [
                 const SizedBox(
-                  height: 10,
+                  height: 50,
                 ),
                 const Text(
                   "شونز خیاطی",
@@ -37,11 +39,11 @@ class _LoginState extends State<Login> {
                   style: TextStyle(fontSize: 28),
                 ),
                 Container(
-                  margin: const EdgeInsets.all(10),
+                  margin: const EdgeInsets.fromLTRB(20, 0, 20, 0),
                   child: Image.asset("assets/images/Account-amico.png"),
                 ),
                 LoginInput(
-                  controller: phoneController,
+                    controller: phoneController,
                 ),
                 const SizedBox(
                   height: 30,
@@ -55,7 +57,7 @@ class _LoginState extends State<Login> {
                         elevation: 0,
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(10)),
-                        backgroundColor: const Color(0xff005200)),
+                        backgroundColor: AppColors.greenShoonz),
                     onPressed: () {
                       Navigator.pushNamed(context, "/otp");
                     },
@@ -87,7 +89,7 @@ class _LoginState extends State<Login> {
                   "ورود شما به معنای پذیرش سایت و حریم خصوصی می باشد",
                   textDirection: TextDirection.rtl,
                   maxLines: 2,
-                  style: TextStyle(color: Color(0xff005200), fontSize: 15),
+                  style: TextStyle(color: AppColors.greenShoonz, fontSize: 15),
                 )
               ],
             ),

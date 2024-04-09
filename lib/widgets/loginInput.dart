@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shoonz_tailor/constants/appColors.dart';
 
 class LoginInput extends StatefulWidget {
   const LoginInput({super.key, required this.controller});
@@ -26,18 +27,18 @@ class _LoginInputState extends State<LoginInput> {
             prefixIcon: const Icon(Icons.phone_outlined),
             hintMaxLines: 1,
             hintText: "شماره همراه",
-            fillColor: const Color(0xfff2f6f2),
+            fillColor: AppColors.greenLight,
             filled: true,
             focusedBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(10),
               borderSide: const BorderSide(
-                color: Color(0xff005200),
+                color:AppColors.greenShoonz,
               ),
             ),
             enabledBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(10),
               borderSide: const BorderSide(
-                color: Color(0xff005200),
+                color: AppColors.greenShoonz,
               ),
             ),
           ),

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:shoonz_tailor/widgets/enterSizeWidgets/clothes_box.dart';
 import 'dart:io';
 import 'package:shoonz_tailor/widgets/enterSizeWidgets/grid_clothes_box.dart';
+import 'package:shoonz_tailor/constants/appColors.dart';
 
 class EnterSize extends StatelessWidget {
   EnterSize({super.key});
@@ -104,7 +105,8 @@ class EnterSize extends StatelessWidget {
                       style: TextStyle(
                           color: Colors.white, fontWeight: FontWeight.bold),
                     )),
-              )
+              ),
+              const SizedBox(height: 15,)
             ],
           ),
         ),

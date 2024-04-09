@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pinput/pinput.dart';
+import 'package:shoonz_tailor/constants/appColors.dart';
 
 class OtpInput extends StatefulWidget {
   const OtpInput({super.key, required this.controller});
@@ -11,15 +12,16 @@ class OtpInput extends StatefulWidget {
 
 class _OtpInputState extends State<OtpInput> {
   final defaultPinTheme = PinTheme(
-    width: 56,
-    height: 56,
+    width: 65,
+    height: 65,
     textStyle: const TextStyle(
-        fontSize: 20,
-        color: Color.fromRGBO(30, 60, 87, 1),
+        fontSize: 25,
+        color:AppColors.greenShoonz,
         fontWeight: FontWeight.w600),
     decoration: BoxDecoration(
-      border: Border.all(color: const Color(0xff005200)),
+      border: Border.all(color: AppColors.greenShoonz),
       borderRadius: BorderRadius.circular(10),
+      color: AppColors.greenLight,
     ),
   );
 

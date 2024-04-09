@@ -28,10 +28,9 @@ class _OtpState extends State<Otp> {
           child: Column(
             children: [
               Container(
-                margin: const EdgeInsets.all(10),
+                margin: const EdgeInsets.fromLTRB(20,30,20,0),
                 child: Image.asset("assets/images/Account-amico.png"),
               ),
-              const SizedBox(height: 20),
               const Text(
                 "کد ارسال شده به شماره تماس را وارد نمایید:",
                 textDirection: TextDirection.rtl,

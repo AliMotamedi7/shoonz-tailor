@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shoonz_tailor/widgets/customerWidgets/customerDateButton.dart';
 import 'package:shoonz_tailor/widgets/customerWidgets/customer_list_name.dart';
+import 'package:shoonz_tailor/constants/appColors.dart';
 
 class CustomerPage extends StatefulWidget {
   const CustomerPage({super.key});
@@ -20,7 +21,7 @@ class _CustomerPageState extends State<CustomerPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       floatingActionButton: FloatingActionButton(
-        backgroundColor: const Color(0xff005200),
+        backgroundColor: AppColors.greenShoonz,
         elevation: 0,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(30),
@@ -37,7 +38,7 @@ class _CustomerPageState extends State<CustomerPage> {
               child: Column(
         children: [
           Padding(
-            padding: const EdgeInsets.only(left: 20.0),
+            padding: const EdgeInsets.fromLTRB(20, 30, 0, 0),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -93,7 +94,7 @@ class _CustomerPageState extends State<CustomerPage> {
                             "لیست مشتریان",
                             textAlign: TextAlign.start,
                             textDirection: TextDirection.rtl,
-                            style: TextStyle(color: Colors.black, fontSize: 18),
+                            style: TextStyle(color: Colors.black, fontSize: 18, fontWeight: FontWeight.bold),
                           ),
                         ],
                       ),
