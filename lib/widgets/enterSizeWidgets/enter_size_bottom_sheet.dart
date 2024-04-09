@@ -19,8 +19,11 @@ class _EnterSizeTextFieldState extends State<EnterSizeTextField> {
       child: TextField(
         controller: widget.controller,
         textAlign: TextAlign.center,
+        textDirection: TextDirection.rtl,
+        textAlignVertical: TextAlignVertical.top,
         textInputAction: TextInputAction.next,
         cursorColor: AppColors.greenShoonz,
+        keyboardType: const TextInputType.numberWithOptions(decimal: true),
         decoration: InputDecoration(
           focusedBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(5),

@@ -36,7 +36,7 @@ class _ClotheBoxState extends State<ClotheBox> {
           Column(
             children: [
               Text(widget.name),
-              SizedBox(
+              const SizedBox(
                 height: 8,
               ),
               EnterSizeTextField(

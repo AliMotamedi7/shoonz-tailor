@@ -81,6 +81,7 @@ class EnterSize extends StatelessWidget {
                 width: MediaQuery.sizeOf(context).width,
                 height: MediaQuery.sizeOf(context).height / 3,
                 child: GridView.count(
+                  physics: const NeverScrollableScrollPhysics(),
                   crossAxisCount: 3,
                   children: List.generate(
                       type.length,
@@ -106,7 +107,9 @@ class EnterSize extends StatelessWidget {
                           color: Colors.white, fontWeight: FontWeight.bold),
                     )),
               ),
-              const SizedBox(height: 15,)
+              const SizedBox(
+                height: 15,
+              )
             ],
           ),
         ),
