@@ -69,7 +69,9 @@ class _OrderRegistrationState extends State<OrderRegistration> {
                     backgroundColor: AppColors.greenDark,
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10))),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushNamed(context, "/deliveryDate");
+                },
                 icon: const Icon(
                   Icons.date_range,
                   color: Colors.black,

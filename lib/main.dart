@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:shoonz_tailor/constants/appColors.dart';
 import 'package:shoonz_tailor/pages/customer.dart';
+import 'package:shoonz_tailor/pages/delivery_date.dart';
 import 'package:shoonz_tailor/pages/enter_size.dart';
 import 'package:shoonz_tailor/pages/home.dart';
 import 'package:shoonz_tailor/pages/login.dart';
@@ -19,7 +21,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(fontFamily: "IranSans"),
+      theme: ThemeData(
+          fontFamily: "IranSans", primaryColor: AppColors.greenShoonz),
       initialRoute: '/',
       routes: {
         '/': (context) => const Splash(),
@@ -30,6 +33,7 @@ class MyApp extends StatelessWidget {
         '/order': (context) => const OrderPage(),
         '/orderRegistration': (context) => const OrderRegistration(),
         '/enterSize': (context) => EnterSize(),
+        '/deliveryDate': (context) => const DeliveryDate(),
       },
     );
   }
