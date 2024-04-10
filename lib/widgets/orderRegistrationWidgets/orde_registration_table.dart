@@ -1,6 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:shoonz_tailor/constants/appColors.dart';
 
 class OrderRegistrationTable extends StatefulWidget {
@@ -24,24 +22,27 @@ class _OrderRegistrationTableState extends State<OrderRegistrationTable> {
               //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               crossAxisAlignment: CrossAxisAlignment.center,
               textDirection: TextDirection.rtl,
-              children:[
+              children: [
                 Expanded(
-                    flex: 33,
-                    child: SizedBox(),
+                  flex: 33,
+                  child: SizedBox(),
                 ),
                 Expanded(
-                    flex: 185,
-                    child: Text(
-                      "اطلاعات سفارش",
-                      textAlign: TextAlign.center,
-                      style: TextStyle(fontSize: 12),
-                    ),
+                  flex: 185,
+                  child: Text(
+                    "اطلاعات سفارش",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(fontSize: 12),
+                  ),
                 ),
                 Expanded(
                   flex: 44,
                   child: Text(
                     "تعداد",
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
                     textAlign: TextAlign.center,
+                    textDirection: TextDirection.rtl,
                     style: TextStyle(fontSize: 12),
                   ),
                 ),
@@ -60,7 +61,7 @@ class _OrderRegistrationTableState extends State<OrderRegistrationTable> {
                     textAlign: TextAlign.center,
                     style: TextStyle(fontSize: 12),
                   ),
-                ),  
+                ),
                 Expanded(
                   flex: 112,
                   child: SizedBox(),
@@ -96,13 +97,13 @@ class _OrderRegistrationTableState extends State<OrderRegistrationTable> {
                         const Text(
                           "۲",
                           textAlign: TextAlign.center,
-                          style:
-                              TextStyle(color: AppColors.greenShoonz, fontSize: 14),
+                          style: TextStyle(
+                              color: AppColors.greenShoonz, fontSize: 14),
                         ),
                         const Text(
                           "۱۰۰,۰۰۰",
                           textAlign: TextAlign.center,
-                          style: TextStyle(color:AppColors.greenShoonz),
+                          style: TextStyle(color: AppColors.greenShoonz),
                         ),
                         Container(
                           alignment: Alignment.center,
