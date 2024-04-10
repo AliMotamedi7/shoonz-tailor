@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:shoonz_tailor/constants/appColors.dart';
 
 class OrderRegistrationTable extends StatefulWidget {
@@ -17,46 +19,51 @@ class _OrderRegistrationTableState extends State<OrderRegistrationTable> {
           Container(
             decoration: const BoxDecoration(color: AppColors.greyBox),
             width: MediaQuery.sizeOf(context).width,
-            padding: const EdgeInsets.all(8),
+            padding: const EdgeInsets.fromLTRB(0, 8, 0, 8),
             child: const Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               crossAxisAlignment: CrossAxisAlignment.center,
               textDirection: TextDirection.rtl,
-              children: [
-                Padding(
-                  padding: EdgeInsets.all(8.0),
-                  child: Text(
-                    "اطلاعات سفارش",
-                    textAlign: TextAlign.center,
-                    style: TextStyle(fontSize: 12),
-                  ),
+              children:[
+                Expanded(
+                    flex: 33,
+                    child: SizedBox(),
                 ),
-                Padding(
-                  padding: EdgeInsets.all(8.0),
+                Expanded(
+                    flex: 185,
+                    child: Text(
+                      "اطلاعات سفارش",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(fontSize: 12),
+                    ),
+                ),
+                Expanded(
+                  flex: 44,
                   child: Text(
                     "تعداد",
                     textAlign: TextAlign.center,
                     style: TextStyle(fontSize: 12),
                   ),
                 ),
-                Padding(
-                  padding: EdgeInsets.all(10.0),
+                Expanded(
+                  flex: 95,
                   child: Text(
                     "فی",
                     textAlign: TextAlign.center,
                     style: TextStyle(fontSize: 12),
                   ),
                 ),
-                Padding(
-                  padding: EdgeInsets.all(8.0),
+                Expanded(
+                  flex: 197,
                   child: Text(
                     "قیمت کل",
                     textAlign: TextAlign.center,
                     style: TextStyle(fontSize: 12),
                   ),
-                ),
-                SizedBox(
-                  width: 10,
+                ),  
+                Expanded(
+                  flex: 112,
+                  child: SizedBox(),
                 ),
               ],
             ),
