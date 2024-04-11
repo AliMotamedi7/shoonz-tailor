@@ -90,7 +90,9 @@ class _OrderRegistrationState extends State<OrderRegistration> {
                     backgroundColor: AppColors.greenDark,
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10))),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushNamed(context, "/addNote");
+                },
                 icon: const Icon(
                   Icons.list_alt_sharp,
                   color: Colors.black,

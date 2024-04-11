@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shoonz_tailor/constants/appColors.dart';
+import 'package:shoonz_tailor/pages/add_note.dart';
 import 'package:shoonz_tailor/pages/customer.dart';
 import 'package:shoonz_tailor/pages/delivery_date.dart';
 import 'package:shoonz_tailor/pages/enter_size.dart';
@@ -8,6 +9,7 @@ import 'package:shoonz_tailor/pages/login.dart';
 import 'package:shoonz_tailor/pages/order.dart';
 import 'package:shoonz_tailor/pages/order_registration.dart';
 import 'package:shoonz_tailor/pages/otp.dart';
+import 'package:shoonz_tailor/pages/settings.dart';
 import 'package:shoonz_tailor/pages/splash.dart';
 
 void main() {
@@ -34,6 +36,8 @@ class MyApp extends StatelessWidget {
         '/orderRegistration': (context) => const OrderRegistration(),
         '/enterSize': (context) => EnterSize(),
         '/deliveryDate': (context) => const DeliveryDate(),
+        '/addNote': (context) => const AddNote(),
+        '/settings': (context) => const Settings(),
       },
     );
   }
